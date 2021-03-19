@@ -1,16 +1,34 @@
 package code_problems_j;
 
-
 public class Main {
 
     public static void main(String[] args) {
 
-        foo();
+        String txt = "ABC";
+
+        char[] charactersFromStringArr = txt.toCharArray();
+
+        for (int i = 0; i < charactersFromStringArr.length; i++) {
+
+            char charTemp = charactersFromStringArr[i];
+            int intFromChar = Character.valueOf(charTemp);
+            String stringFromChar = String.valueOf(charTemp);
+
+            if (intFromChar != 32) {//check if empty space
+                print(stringFromChar);
+            } else {
+                print("Fail");
+            }
+
+        }
+
 
     }
 
-    private static void foo() {
+    public static String[] stringToArray(String s) {
 
+
+        return null;//new String[]{n..}
 
     }
 
@@ -25,3 +43,5 @@ public class Main {
 
 
 }
+
+//String#split().
