@@ -6,7 +6,6 @@ public class Main {
     public static void main(String[] args) {
 
 
-
     }
 
 
@@ -17,6 +16,24 @@ public class Main {
     static void print(String someString) {
         System.out.println(someString);
     }
+
+
+    /* --SOLUTION--
+
+    //Read
+    Task:
+
+    //Play
+
+    //Manual
+
+    //Algorithm
+
+    //Pseudocode
+
+    //Code
+
+     */
 
 
 }
