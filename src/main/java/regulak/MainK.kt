@@ -1,7 +1,13 @@
+import playutils.A
+
 fun main() {
 
-    var wordsMList0: MutableList<String> = mutableListOf("alpha", "beta", "gamma")
 
+    val a = A()
+
+    with(a) {
+       aMethod()
+    }
 
 
 }

@@ -3,22 +3,13 @@ package exercise_coroutines
 import kotlinx.coroutines.*
 
 
- fun main() {
+fun main() {
 
-    //--
-   Thread.sleep(4000)
 
-   // println("--out launch--")
     GlobalScope.launch(Dispatchers.Default) {
-        println("0")
-        fooShort()
-        println("1")
-        fooRegular()
-        println("2")
-        fooLong()
+
     }
 
-    //---
 
 }
 
