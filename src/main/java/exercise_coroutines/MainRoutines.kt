@@ -1,15 +1,23 @@
 package exercise_coroutines
 
 import kotlinx.coroutines.*
+import kotlin.coroutines.CoroutineContext
 
 
 fun main() {
 
-    GlobalScope.launch {
+    print("***mainStart***")
+
+    runBlocking {
+
+
 
     }
 
+    print("***mainEnd***")
+
 }
+
 
 private suspend fun fooShort() {
     println("--short--START")
