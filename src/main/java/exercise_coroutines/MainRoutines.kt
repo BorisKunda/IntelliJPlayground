@@ -11,7 +11,13 @@ fun main() {
 
     runBlocking {
 
-        printThreadName("***runBlocking**")
+        fooShort()
+
+        printThreadName("***runBlocking**1")
+
+        fooLong()
+
+        printThreadName("***runBlocking**2")
 
     }
 
