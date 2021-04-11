@@ -1,24 +1,21 @@
 package exercise_coroutines
 
 import kotlinx.coroutines.*
+import playutils.printThreadName
 import kotlin.coroutines.CoroutineContext
 
 
 fun main() {
 
-    Thread.currentThread().name
-
-    print("***mainStart***")
+    printThreadName("***mainStart***")
 
     runBlocking {
 
-        Thread.currentThread().name
-
-
+        printThreadName("***runBlocking**")
 
     }
 
-    print("***mainEnd***")
+    printThreadName("***mainEnd***")
 
 }
 
