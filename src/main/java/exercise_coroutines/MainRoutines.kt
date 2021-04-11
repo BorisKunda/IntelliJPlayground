@@ -6,9 +6,13 @@ import kotlin.coroutines.CoroutineContext
 
 fun main() {
 
+    Thread.currentThread().name
+
     print("***mainStart***")
 
     runBlocking {
+
+        Thread.currentThread().name
 
 
 
