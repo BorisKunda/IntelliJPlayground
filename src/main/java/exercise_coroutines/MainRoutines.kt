@@ -9,27 +9,25 @@ fun main() {
 
     runBlocking {
 
-
-
     }
 
 }
 
 
-private suspend fun fooShort() {
-    println("--short--START")
+private suspend fun fooShort(message: String = "") {
+    println("--short--START $message")
     delay(1000)
-    println("--short--END")
+    println("--short--END $message")
 }
 
-private suspend fun fooRegular() {
-    println("--regular--START")
+private suspend fun fooRegular(message: String = "") {
+    println("--regular--START $message")
     delay(2000)
-    println("--regular--END")
+    println("--regular--END $message")
 }
 
-private suspend fun fooLong() {
-    println("--long--START")
+private suspend fun fooLong(message: String = "") {
+    println("--long--START $message")
     delay(3000)
-    println("--long--END")
+    println("--long--END $message")
 }
