@@ -7,21 +7,11 @@ import kotlin.coroutines.CoroutineContext
 
 fun main() {
 
-    printThreadName("***mainStart***")
-
     runBlocking {
 
-        fooShort()
 
-        printThreadName("***runBlocking**1")
-
-        fooLong()
-
-        printThreadName("***runBlocking**2")
 
     }
-
-    printThreadName("***mainEnd***")
 
 }
 
