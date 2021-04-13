@@ -9,9 +9,8 @@ fun main() {
 
     runBlocking {
 
-        var job1 = launch { fooShort("1") }
-        var job2 = launch { fooShort("2") }
-        var job3 = launch { fooShort("3") }
+        var job = launch { }
+        var deffered = async { }
 
     }
 
