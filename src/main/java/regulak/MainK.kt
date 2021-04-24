@@ -1,13 +1,7 @@
-import playutils.A
+package regulak
 
 fun main() {
 
-
-    val a = A()
-
-    with(a) {
-       aMethod()
-    }
 
 
 }

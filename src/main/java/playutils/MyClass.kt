@@ -1,6 +1,6 @@
 package playutils
 
-class A {
+class MyClass {
 
     fun aMethod(){
         print("aMethod")
