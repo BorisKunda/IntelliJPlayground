@@ -1,27 +1,45 @@
 package regularj;
 
 import java.util.Arrays;
-import java.util.Scanner;
 
 public class Main {
 
     public static void main(String[] args) {
 
-        int arr1D[] = {1, 2, 2, 2, 2, 3, 4, 7, 8, 8};
+        /**--Data--*/
+
+        int[] arr1D = {1, 2, 2, 2, 2, 3, 4, 7, 8, 8};
 
 
-        int[][] matrixArr2d = {
+        int[][] binaryMatrixS = {
                 {1, 1},
                 {0, 0},
         };
 
+        int[][] binaryMatrixM = {
+                {1, 1, 1, 0},
+                {1, 0, 1, 1},
+                {1, 0, 0, 1},
+                {1, 0, 0, 1}
+        };
 
-        print2D(matrixArr2d);
+        int[][] binaryMatrixL = new int[][]{
 
-        System.out.println("---");
+                {1, 1, 1, 1, 0, 1, 1, 1, 0, 0, 0, 1},
+                {1, 0, 0, 1, 0, 1, 1, 1, 0, 0, 0, 1},
+                {1, 0, 0, 1, 0, 1, 1, 1, 0, 0, 0, 1},
+                {1, 0, 0, 1, 0, 1, 1, 1, 0, 0, 0, 1},
+                {1, 0, 0, 1, 0, 1, 1, 1, 0, 0, 0, 1},
+        };
 
-        System.out.println("count: " + getCountOccurrences2D(1, matrixArr2d));
+        /**--Methods--*/
 
+        print(findNumberConnected(0, 0, binaryMatrixS)+"");
+
+    }
+
+    public static void print(String s) {
+        System.out.println(s);
     }
 
     public static int getCountOccurrences2D(int specialVal, int[][] matrix) {
@@ -56,10 +74,41 @@ public class Main {
         int x = 2;
 
         int res = 0;
-        for (int i = 0; i < n; i++)
-            if (x == arr[i])
+        for (int j : arr)
+            if (x == j)
                 res++;
         return res;
+    }
+
+    public static int findNumberConnected(int a, int b, int[][] z) {
+        boolean canUp = (a - 1 >= 0);
+        boolean canDown = (a + 1 < z.length);
+        boolean canRight = (b + 1 < z[0].length);
+        boolean canLeft = (b - 1 >= 0);
+
+        int value = z[a][b];
+
+        int up = 0;
+        int down = 0;
+        int right = 0;
+        int left = 0;
+
+        z[a][b] = 2;
+
+        if (canUp && z[a - 1][b] == value) {
+            up = findNumberConnected(a - 1, b, z);
+        }
+        if (canDown && z[a + 1][b] == value) {
+            down = findNumberConnected(a + 1, b, z);
+        }
+        if (canLeft && z[a][b - 1] == value) {
+            left = findNumberConnected(a, b - 1, z);
+        }
+        if (canRight && z[a][b + 1] == value) {
+            right = findNumberConnected(a, b + 1, z);
+        }
+
+        return up + left + right + down + 1;
     }
 
 }
