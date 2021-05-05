@@ -9,28 +9,16 @@ fun main() {
 
     runBlocking {
 
-        var job = launch { }
-        var deffered = async { }
+        println(getUserSuspend("101"))
 
     }
 
 }
 
-
-private suspend fun fooShort(message: String = "") {
-    println("--short--START $message")
+suspend fun getUserSuspend(userId: String): User {
     delay(1000)
-    println("--short--END $message")
+    return User(userId, "Filip")
 }
 
-private suspend fun fooRegular(message: String = "") {
-    println("--regular--START $message")
-    delay(2000)
-    println("--regular--END $message")
-}
-
-private suspend fun fooLong(message: String = "") {
-    println("--long--START $message")
-    delay(3000)
-    println("--long--END $message")
-}
+/**user*/
+data class User(val userId: String, val s: String)
