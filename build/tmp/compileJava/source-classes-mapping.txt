@@ -1,4 +1,4 @@
-regularj/Main.java
- regularj.Main
 dfsalgorithm/Magic.java
  dfsalgorithm.Magic
+regularj/Main.java
+ regularj.Main
