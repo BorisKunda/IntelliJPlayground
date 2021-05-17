@@ -1,4 +1,6 @@
 dfsalgorithm/Magic.java
  dfsalgorithm.Magic
+regularj/SampleObj.java
+ regularj.SampleObj
 regularj/Main.java
  regularj.Main
